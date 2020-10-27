@@ -1,0 +1,28 @@
+
+plugins {
+    id'application'
+    id'com.github.johnrengelman.shadow' version '4.0.4'
+}
+
+def jdaVersion = '4.2.0_168'
+
+mainClassName = 'main.java.Bot'
+group 'es.almogavar'
+version '0.20201021-ALPHA'
+sourceCompatibility = targetCompatibility = 1.15
+
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile "net.dv8tion:JDA:$jdaVersion"
+    compile 'org.apache.commons:commons-lang3:3.7'
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.26'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.6.1'
+}
+
+compileJava.options.encoding = 'UTF-8'
